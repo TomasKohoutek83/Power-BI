@@ -8,4 +8,4 @@ DAX
         
 Reseni pro spojeni tabulek v pripade many to one a one ti one . Vytvoreni tabulky v power query.
         Pouzito v Weekly  overview reportu pri zjisteni odhlasenych hodin vs planovane hodiny.
-        https://www.youtube.com/watch?v=5vOEktgYWM0&list=PL1myWUzvmmDGmLfty3BDluz8nzme1dZxg&index=5
+        https://www.youtube.com/watch?v=vAvQ8pCnWDk
