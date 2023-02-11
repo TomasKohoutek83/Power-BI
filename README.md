@@ -37,3 +37,8 @@ Calculate - odcitani dvou funkci calculate v jednom sloupci
                 2020-01-01	South	200	-100
                 2020-01-02	North	150	-25
                 2020-01-02	South	175	-25
+            
+            
+                Dalsi varianta:
+                        = CALCULATE (COUNT (Orders[Amount]), FILTER (Orders, Orders[Region] = "North"))
+                        - CALCULATE (COUNT (Orders[Amount]), FILTER (Orders, Orders[Region] = "South"))
