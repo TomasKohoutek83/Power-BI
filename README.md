@@ -41,4 +41,6 @@ Calculate - odcitani dvou funkci calculate v jednom sloupci
             
                 Dalsi varianta:
                         = CALCULATE (COUNT (Orders[Amount]), FILTER (Orders, Orders[Region] = "North"))
-                        - CALCULATE (COUNT (Orders[Amount]), FILTER (Orders, Orders[Region] = "South"))
+                        - CALCULATE (COUNT (Orders[Amount]), FILTER (Orders, Orders[Region] = "South")
+  
+Count + filter - COUNTROWS(filter(Aktivni_pracovnici_,Aktivni_pracovnici_[Okruh pracovníků]= "Tarifní zaměstnanci"))*168
