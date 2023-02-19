@@ -44,3 +44,9 @@ Calculate - odcitani dvou funkci calculate v jednom sloupci
                         - CALCULATE (COUNT (Orders[Amount]), FILTER (Orders, Orders[Region] = "South")
   
 Count + filter - COUNTROWS(filter(Aktivni_pracovnici_,Aktivni_pracovnici_[Okruh pracovníků]= "Tarifní zaměstnanci"))*168
+
+
+Navod DAX Function
+    Prepsani textu - Subtitude : Novy column = Subtitude(Table[column] ,"original nazev","novy nazev")
+    
+
