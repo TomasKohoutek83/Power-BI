@@ -47,6 +47,7 @@ Count + filter - COUNTROWS(filter(Aktivni_pracovnici_,Aktivni_pracovnici_[Okruh 
 
 
 Navod DAX Function
-    Prepsani textu - Subtitude : Novy column = Subtitude(Table[column] ,"original nazev","novy nazev")
-    
+    Prepsani hodnoty - SUBTITUDE            : Novy column = Subtitude(Table[column] ,"original nazev","novy nazev")
+    Spojeni relevatnich dat - RELATED       : NOvy column = Related(Table[collumn])
+    Vytvoreni kalendare - CALENDAR          : Novy table = Calendar('Table[column), MAX(Table[column]))
 
