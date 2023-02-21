@@ -58,11 +58,20 @@ Filtrovani
                                 SUm(Table1[column]),
                                 ALL(Table1) 
                                 
-    Crossfilter a distincount               : pouziti crossfilter v pripade spojenych tabulek kde se nacitaji data ktera nechceme. Dulezite pouziti BOTH (lze nastavit                                               i v modelu.
+ Crossfilter a distincount                   : pouziti crossfilter v pripade spojenych tabulek kde se nacitaji data ktera nechceme. Dulezite pouziti BOTH (lze nastavit                                               i v modelu.
                         Promena = 
                             calculate(
                                 distincount(Table1[column]),
                                 crossfilter(Table1[column], table2[column],
                                 BOTH))
     
-
+Logical funkce
+    IF (funkcional test, value if true [value if false])
+    Switch (expresion, value, result[,value, result] ... [,else])  :   Promena = switch( True nebo nazev sloupce,
+                                                                                    [Total_sales] < 25 000, "Poor",
+                                                                                    [Total sales] < 50 000, "Below",
+                                                                                    [Total sales] < 75 000, "Above",
+                                                                                    "Exceptional")
+                                                                                    
+  
+                                                                                 
