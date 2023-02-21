@@ -50,4 +50,19 @@ Navod DAX Function
     Prepsani hodnoty - SUBTITUDE            : Novy column = Subtitude(Table[column] ,"Cast nebo cely text v hodnote","cim nahradim")
     Spojeni relevatnich dat - RELATED       : NOvy column = Related(Table[collumn])
     Vytvoreni kalendare - CALENDAR          : Novy table = Calendar('Table[column), MAX(Table[column]))
+    
+Filtrovani
+    Ignorovani filtru:                      : ALL nastaveni ignorovani filtru pri calculate
+                        Promena =         
+                            calculate(
+                                SUm(Table1[column]),
+                                ALL(Table1) 
+                                
+    Crossfilter a distincount               : pouziti crossfilter v pripade spojenych tabulek kde se nacitaji data ktera nechceme. Dulezite pouziti BOTH (lze nastavit                                               i v modelu.
+                        Promena = 
+                            calculate(
+                                distincount(Table1[column]),
+                                crossfilter(Table1[column], table2[column],
+                                BOTH))
+    
 
