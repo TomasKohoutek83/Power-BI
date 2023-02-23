@@ -82,6 +82,42 @@ Summarize(table,groupby_column,nazev,exrpresion)  napr: Summarize(Amount, Amount
 
 Selectcolumns ( table, Nazev, sloupec)  napr: Selectcolumns(FactTable," Profit", revenue - cost)          = Vytvori novou tabulku obsahujici sloupec s vydefinovanym nazvem a hodnotami vypoctu
 Nove metody 
-AddColumns( Tabulka, Nazev, column)  napr: addcolumns(Fact Table, "Profit", Revenue - costs)              = Vytvrori novou tabulku ktera obsahuje novy zadany sloupec a sloupce z kteryvh byl proveden vypocet -
+AddColumns( Tabulka, Nazev, column)  napr: addcolumns(Fact Table, "Profit", Revenue - costs)              = Vytvrori novou tabulku ktera obsahuje novy zadany sloupec a sloupce z kteryvh byl proveden vypocet 
+
+Time inteligence function
+
+Nextday(dates)                                =  vrati dalsi den
+sameperiodlastyear(dates)                     =  vrati datum lonsky rok
+datesbetween (dates, startdate, enddate)      =  vrati datumy mezi zadanym rozpetim
+
+MId seaseom sales  = 
+Calculate (
+    sum( table[colum]),
+    datesbetween( table[column],
+                date( 2014, 10, 04),
+                date (2014, 10 , 20)
+                )
+
+totalytd(expresion, dates[,filter])           =  vrati rok hodnotu v expresion
+totalqtd(expresion, dates[,filter])           =  vrati quartal hodnotu v expresion
+totalmtd(expresion, dates[,filter])           =  vrati mesic hodnotu v expresion
+
+napr: Sum_ytd = 
+    totalytd ( 
+        sum(table[column]),
+        table[column]
+              )
+    
+
+
+
+
+
+
+
+
+
+
+
 
                                                                                  
