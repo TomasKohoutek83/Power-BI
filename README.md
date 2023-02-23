@@ -46,6 +46,8 @@ Calculate - odcitani dvou funkci calculate v jednom sloupci
 Count + filter - COUNTROWS(filter(Aktivni_pracovnici_,Aktivni_pracovnici_[Okruh pracovníků]= "Tarifní zaměstnanci"))*168
 
 
+
+
 Navod DAX Function
     Prepsani hodnoty - SUBTITUDE            : Novy column = Subtitude(Table[column] ,"Cast nebo cely text v hodnote","cim nahradim")
     Spojeni relevatnich dat - RELATED       : NOvy column = Related(Table[collumn])
@@ -72,6 +74,10 @@ Logical funkce
                                                                                     [Total sales] < 50 000, "Below",
                                                                                     [Total sales] < 75 000, "Above",
                                                                                     "Exceptional")
-                                                                                    
-  
+Starsi metody                                                                                    
+Distinct - Distinct(Table | Table)                          = Odstrani duplicitni radky z tabulky nebo hodnoty ze sloupce
+Selectcolumns -  Selectcolumns ( table, Nazev, sloupec)     = Vrati vybrane sloupce z jine table a vytvori novou tabulku dle zadaneho nazvu
+Nove metody 
+AddColumns( Tabulka, Nazev, column)  napr: addcolumns(Fact Table, "Profit", Revenue - costs)   = Vrati do tabulky vyselektovane sloupce z jine tabulky
+
                                                                                  
