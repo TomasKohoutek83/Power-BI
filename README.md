@@ -74,10 +74,14 @@ Logical funkce
                                                                                     [Total sales] < 50 000, "Below",
                                                                                     [Total sales] < 75 000, "Above",
                                                                                     "Exceptional")
+                                                                                    
+                                                                                    
 Starsi metody                                                                                    
-Distinct - Distinct(Table | Table)                          = Odstrani duplicitni radky z tabulky nebo hodnoty ze sloupce
-Selectcolumns -  Selectcolumns ( table, Nazev, sloupec)     = Vrati vybrane sloupce z jine table a vytvori novou tabulku dle zadaneho nazvu
+Distinct(Table | Table)                          = Odstrani duplicitni radky z tabulky nebo hodnoty ze sloupce
+Summarize(table,groupby_column,nazev,exrpresion)  napr: Summarize(Amount, Amounts[year], Amounts[category],"Total Amount", Sum(Amounts[Anoubnt])) = vytvori tabulku viy lekce
+
+Selectcolumns ( table, Nazev, sloupec)  napr: Selectcolumns(FactTable," Profit", revenue - cost)          = Vytvori novou tabulku obsahujici sloupec s vydefinovanym nazvem a hodnotami vypoctu
 Nove metody 
-AddColumns( Tabulka, Nazev, column)  napr: addcolumns(Fact Table, "Profit", Revenue - costs)   = Vrati do tabulky vyselektovane sloupce z jine tabulky
+AddColumns( Tabulka, Nazev, column)  napr: addcolumns(Fact Table, "Profit", Revenue - costs)              = Vytvrori novou tabulku ktera obsahuje novy zadany sloupec a sloupce z kteryvh byl proveden vypocet -
 
                                                                                  
