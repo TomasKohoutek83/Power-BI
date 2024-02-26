@@ -1,0 +1,46 @@
+
+
+EVALUATE _SAP_DATA_0001;
+
+Evaluate 	
+	Values(_SAP_DATA_0001[Owner]);
+	
+	
+Evaluate
+CALCULATETABLE
+	(_SAP_DATA_0001,_SAP_DATA_0001[Owner] = "Ludek Nemec");
+	
+
+DEFINE	
+	--Measure SumExpeced = SUM('_SAP_DATA_0001'[Expected Value]) - Spatne
+	MEASURE _SAP_DATA_0001[Expected] = SUM(_SAP_DATA_0001[Expected Value])
+		
+Evaluate
+ADDCOLUMNS(
+			VALUES(_SAP_DATA_0001[Owner]),
+			"Suma",[Expected]
+			
+			)
+ORDER BY _SAP_DATA_0001[Owner]
+
+evaluate
+SELECTCOLUMNS(
+	_SAP_DATA_0001,
+	"Owner",_SAP_DATA_0001[Owner],
+	"Value",_SAP_DATA_0001[Expected Value]
+	)
+	
+	
+Define
+	MEASURE _SAP_DATA_0001[Expected] = SUM(_SAP_DATA_0001[Expected Value])
+	
+EVALUAte
+SELECTCOLUMNS(
+	_SAP_DATA_0001,
+	"Owner",_SAP_DATA_0001[Owner],
+	"Value",_SAP_DATA_0001[Expected Value],
+	"C",[Expected]
+	)
+	
+	
+
